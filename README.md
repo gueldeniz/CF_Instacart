@@ -25,6 +25,15 @@ customers in their system and how their ordering behaviors differ. For example:
   - What different classifications does the demographic information suggest?
   - What differences can you find in ordering habits of different customer profiles?
 
+## Achievements
+- First experience in the world of coding with Python
+- Installing the suitable programming environment for conducting an analysis
+- Wrangling data to align with the goals of an analysis, creating subsets, consistency check
+- Combining and exporting data
+- Deriving new variables
+- Grouping data & aggregating new variables
+- Visualizations with seaborn and matplotlib
+
 ## Data
 The dataset comprises of Information following parameters:
 - orders
@@ -37,3 +46,40 @@ The dataset comprises of Information following parameters:
 
 ## Executing the Code
 The codes are available as jupyter notebooks, under /Scripts/
+
+- Importing libraries for analysis and visualization:
+````
+#Importing libraries
+
+import pandas as pd
+import numpy as np
+import os
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy
+````
+- Using Information at Wikipedia article to create new region column for further analysis:
+````
+# Creating regional segmentation 
+
+result = []
+
+for value in df_all['state']:
+    if (value == 'Maine') or (value == 'New Hampshire') or (value == 'Vermont') or (value == 'Massachusetts') or (value == 'Rhode Island') or (value == 'Connecticut') or (value == 'New York') or (value == 'Pennsylvania') or (value =='New Jersey'):
+        result.append('Northeast')
+    elif (value == 'Wisconsin') or (value == 'Michigan') or (value == 'Illinois') or (value == 'Indiana') or (value == 'Ohio') or (value == 'North Dakota') or (value == 'South Dakota') or (value == 'Nebraska') or (value == 'Kansas') or (value == 'Minnesota') or (value == 'Iowa') or (value == 'Missouri'):
+        result.append('Midwest')
+    elif (value == 'Deleware') or (value == 'Maryland') or (value == 'District of Columbia') or (value == 'Virginia') or (value == 'West Virginia') or (value == 'North Carolina') or (value == 'South Carolina') or (value == 'Georgia') or (value == 'Florida') or (value == 'Kentucky') or (value == 'Tennessee') or (value == 'Mississippi') or (value == 'Alabama') or (value == 'Oklahoma') or (value == 'Texas') or (value == 'Arkansas') or (value == 'Louisiana'):
+        result.append('South')
+    else:
+        result.append('West')
+df_all['region'] = result
+````
+- Creting crosstabs in order to compare and contrast spending habits among regions:
+````
+# Creating crosstab to compare high-spender and low-spender among regions 
+
+spending_by_region = pd.crosstab(df_all['region'],df_all['spending_flag'],dropna = False)
+spending_by_region
+
+````
