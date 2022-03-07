@@ -93,5 +93,5 @@ region_ordering_bar = regions_by_ordering.plot(kind = 'bar', stacked = True, col
 plt.xticks(rotation=0, horizontalalignment="center")
 plt.tight_layout()
 ````
-![Plot](https://github.com/gueldeniz/CF_Instacart/issues/1#issue-1161741016)
+You can see the ![bar chart here](https://github.com/gueldeniz/CF_Instacart/issues/1#issue-1161741016)
 
