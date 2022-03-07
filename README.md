@@ -90,3 +90,4 @@ region_ordering_bar = regions_by_ordering.plot(kind = 'bar', stacked = True, col
 plt.xticks(rotation=0, horizontalalignment="center")
 plt.tight_layout()
 ````
+Plot
