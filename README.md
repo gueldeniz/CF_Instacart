@@ -59,7 +59,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy
 ````
-- Using Information at Wikipedia article to create new region column for further analysis:
+- I derived a new column called 'region' using information at Wikipedia article from given states for further analysis:
 ````
 # Creating regional segmentation 
 
@@ -76,11 +76,17 @@ for value in df_all['state']:
         result.append('West')
 df_all['region'] = result
 ````
-- Creting crosstabs in order to compare and contrast spending habits among regions:
+- I created several crosstabs in order to compare and contrast various variables. Here I create crosstabs to compare ordering habits among regions and save it to the clipboard. Then, I create a bar chart to visualize the crosstab:
 ````
-# Creating crosstab to compare high-spender and low-spender among regions 
+# Region crosstab by order frequency
 
-spending_by_region = pd.crosstab(df_all['region'],df_all['spending_flag'],dropna = False)
-spending_by_region
+regions_by_ordering = pd.crosstab(df_all['region'], df_all['frequency_flag'], dropna = False)
+regions_by_ordering
+regions_by_ordering.to_clipboard()
 
+#Bar chart
+
+region_ordering_bar = regions_by_ordering.plot(kind = 'bar', stacked = True, color = sns.color_palette('pastel', 3), title= 'Order habits by regions')
+plt.xticks(rotation=0, horizontalalignment="center")
+plt.tight_layout()
 ````
