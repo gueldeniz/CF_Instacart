@@ -33,6 +33,7 @@ customers in their system and how their ordering behaviors differ. For example:
 - Deriving new variables
 - Grouping data & aggregating new variables
 - Visualizations with seaborn and matplotlib
+- Answering business questions with a detailed reporting with Excel
 
 ## Data
 The dataset comprises of Information following parameters:
