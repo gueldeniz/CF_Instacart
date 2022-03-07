@@ -75,7 +75,9 @@ for value in df_all['state']:
     else:
         result.append('West')
 df_all['region'] = result
-````
+````]
+
+
 - I created several crosstabs in order to compare and contrast various variables. Here I create crosstabs to compare ordering habits among regions and save it to the clipboard. Then, I create a bar chart to visualize the crosstab:
 ````
 # Region crosstab by order frequency
@@ -90,4 +92,6 @@ region_ordering_bar = regions_by_ordering.plot(kind = 'bar', stacked = True, col
 plt.xticks(rotation=0, horizontalalignment="center")
 plt.tight_layout()
 ````
-Plot
+Plot:
+
+![https://github.com/gueldeniz/CF_Instacart/issues/1#issue-1161741016]
