@@ -1,9 +1,9 @@
 # Instacart Grocery Basket Analysis (by Career Foundry)
 
-In this mock project, I worked as junior data analyst for the online grocery store Instacart. Instacart is a real company with open online data.
+In this mock project, I worked as a junior data analyst for the online grocery store Instacart. Instacart is a real company with open online data.
 
 ## Objective
-Instacart is an online store that operates through an app and has already very good sales. However, they want to uncover more information about their sales patterns. My tasks consists of performing initial data and exploratory analysis according to the relevant business questions, deriving insights, and suggesting strategies for better segmentation.
+Instacart is an online store that operates through an app and has already very good sales. However, they want to uncover more information about their sales patterns to achieve more growth. My tasks consists of performing initial data and exploratory analysis according to the relevant business questions, deriving insights, and suggesting strategies for better segmentation using Python.
 
 ## Key Questions
 - The sales team needs to know what the busiest days of the week and hours of the day
@@ -24,3 +24,16 @@ customers in their system and how their ordering behaviors differ. For example:
   - Is there a connection between age and family status in terms of ordering habits?
   - What different classifications does the demographic information suggest?
   - What differences can you find in ordering habits of different customer profiles?
+
+## Data
+The dataset comprises of Information following parameters:
+- orders
+- products
+- customers
+
+## Tools
+- pandas -> for data analysis
+- seaborn -> for visualization
+
+## Executing the Code
+The codes are available as jupyter notebooks, under /Scripts/
